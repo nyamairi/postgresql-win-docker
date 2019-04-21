@@ -32,4 +32,4 @@ RUN powershell -Command "Do { pg_isready -q } Until ($?)" && \
 
 EXPOSE 5432
 
-CMD [ "cmd", "/S", "/C", "ServiceMonitor", "%PG_SERVICE%" ]
+ENTRYPOINT [ "cmd", "/S", "/C", "ServiceMonitor", "%PG_SERVICE%" ]
